@@ -1,0 +1,98 @@
+:root {
+	--base-color: rgb(77, 76, 74);
+	--accent-color: rgb(227, 220, 203);
+}
+html {
+	scroll-behavior: smooth;
+	scroll-padding:40px;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: var(--base-color);
+	color: var(--accent-color);
+	padding-bottom: 1rem;
+}
+@media print {
+	body {
+		color:black;f
+		background-color: white;
+	}
+}
+footer {
+	position:fixed;
+	bottom:0;
+	background-color: var(--base-color);
+}
+.vsect {
+	display:flex;
+}
+@media print, (orientation: portrait) {
+	.vsect {
+		display: block;
+	}
+}
+.hsectMaj, .hsectMin, .toc {
+	margin:10px;
+	padding: 0 10px;
+	background-color: rgba(255, 255, 255, 0.084);
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2), -5px -5px 5px rgba(255, 255, 255, 0.2);
+}
+@media print {
+	.hsectMaj, .hsectMin, .toc  {
+		box-shadow: none;
+	}
+}
+@media (orientation: portrait) {
+	.hsectMaj, .hsectMin {
+		padding: 5px 15px;
+		margin-bottom: 20px;
+	}
+}
+.hsectMaj {
+	flex:2;
+}
+.hsectMin {
+	flex:1;
+}
+
+h1, h2 {
+	border-bottom: solid;
+}
+
+.contact {
+	list-style: none;
+	padding:0;
+}
+li {
+	margin-top: 10px;
+}
+@media screen {
+	.contactItem {
+		box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 5px rgba(255, 255, 255, 0.2);
+		border-radius: 20px;
+		padding: 15px 15px;
+	}
+}
+
+a {
+	color: var(--accent-color);
+}
+.toc {
+	flex:1;
+	height:100%;
+	position:sticky;
+	top:20px;
+}
+@media print, (orientation: portrait) {
+	.toc {
+		scale:0;
+		height: 0;
+	}
+	.allContent {
+		display:block
+	}
+}
+.mainContent {
+	flex:4;
+}
