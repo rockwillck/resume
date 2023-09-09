@@ -14,15 +14,22 @@ body {
 }
 @media print {
 	body {
-		color:black;f
+		color:black;
 		background-color: white;
 	}
 }
+
 footer {
 	position:fixed;
 	bottom:0;
 	background-color: var(--base-color);
 }
+@media print {
+	footer {
+		scale:0;
+	}
+}
+
 .vsect {
 	display:flex;
 }
