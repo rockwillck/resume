@@ -33,6 +33,10 @@ footer {
 .vsect {
 	display:flex;
 }
+.vsectOver {
+	flex-direction: column;
+	flex: 1;
+}
 @media print, (orientation: portrait) {
 	.vsect {
 		display: block;
