@@ -1,15 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
 :root {
-	--base-color: #282a36;
+	/* --base-color: #282a36;
 	--accent-color: #f8f8f2;
 	--accent-color-2: #6272a4;
-	--norm-color: #44475a;
+	--norm-color: #44475a; */
+	--base-color: rgb(15, 17, 22);
+	--accent-color: #888ba5;
+	--accent-color-2: #7278b9;
+	--norm-color: #232430;
 }
 html {
 	scroll-behavior: smooth;
 	scroll-padding:40px;
 }
 body {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Jost', sans-serif;
 	background-color: var(--base-color);
 	color: var(--accent-color);
 	padding-bottom: 1rem;
@@ -77,6 +83,7 @@ footer {
 
 h1, h2 {
 	border-bottom: solid;
+	border-width: 2px;
 }
 
 .contact {
