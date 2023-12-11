@@ -55,7 +55,7 @@ footer {
 	margin:10px;
 	background-color: var(--norm-color);
 	border-radius: 20px;
-	box-shadow: 5px 5px 5px #13152175, -5px -5px 5px #d1d3df40;
+	/* box-shadow: 5px 5px 5px #13152175, -5px -5px 5px #d1d3df40; */
 }
 @media print {
 	.hsectMaj, .hsectMin, .toc  {
@@ -88,7 +88,8 @@ li {
 }
 @media screen {
 	.contactItem {
-		box-shadow: inset 5px 5px 5px #13152175, inset -5px -5px 5px #d1d3df40;
+		/* box-shadow: inset 5px 5px 5px #13152175, inset -5px -5px 5px #d1d3df40; */
+		background-color: var(--base-color);
 		border-radius: 20px;
 		padding: 15px 15px;
 	}
