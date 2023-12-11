@@ -107,6 +107,7 @@ li {
 
 a {
 	color: var(--accent-color-2);
+	word-wrap: break-word;
 }
 .toc {
 	flex:1;
