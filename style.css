@@ -1,6 +1,8 @@
 :root {
-	--base-color: rgb(77, 76, 74);
-	--accent-color: rgb(227, 220, 203);
+	--base-color: #282a36;
+	--accent-color: #f8f8f2;
+	--accent-color-2: #6272a4;
+	--norm-color: #44475a;
 }
 html {
 	scroll-behavior: smooth;
@@ -43,12 +45,17 @@ footer {
 		display: block;
 	}
 }
+.toc {
+	padding: 10px 20px;
+}
+.hsectMaj, .hsectMin {
+	padding: 0 10px;
+}
 .hsectMaj, .hsectMin, .toc {
 	margin:10px;
-	padding: 0 10px;
-	background-color: rgba(255, 255, 255, 0.084);
+	background-color: var(--norm-color);
 	border-radius: 20px;
-	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2), -5px -5px 5px rgba(255, 255, 255, 0.2);
+	box-shadow: 5px 5px 5px #13152175, -5px -5px 5px #d1d3df40;
 }
 @media print {
 	.hsectMaj, .hsectMin, .toc  {
@@ -81,14 +88,14 @@ li {
 }
 @media screen {
 	.contactItem {
-		box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 5px rgba(255, 255, 255, 0.2);
+		box-shadow: inset 5px 5px 5px #13152175, inset -5px -5px 5px #d1d3df40;
 		border-radius: 20px;
 		padding: 15px 15px;
 	}
 }
 
 a {
-	color: var(--accent-color);
+	color: var(--accent-color-2);
 }
 .toc {
 	flex:1;
