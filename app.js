@@ -8,9 +8,9 @@ for (let heading of document.getElementsByTagName("h2")) {
         newA.href = `#${heading.id}`
         newA.innerText = heading.innerText
         newA.addEventListener("click", (e) => {
-            heading.parentNode.style.boxShadow = "inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 5px rgba(255, 255, 255, 0.2)"
+            heading.parentNode.style.border = "solid"
             setTimeout(() => {
-                heading.parentNode.style.boxShadow = ""
+                heading.parentNode.style.border = ""
             }, 200)
         })
         newLI.appendChild(newA)

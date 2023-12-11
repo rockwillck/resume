@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 
 :root {
-	/* --base-color: #282a36;
-	--accent-color: #f8f8f2;
-	--accent-color-2: #6272a4;
-	--norm-color: #44475a; */
 	--base-color: rgb(15, 17, 22);
 	--accent-color: #888ba5;
 	--accent-color-2: #7278b9;
 	--norm-color: #232430;
+}
+@media (prefers-color-scheme: light) {
+	:root {
+		--base-color: #dad7d0;
+		--accent-color: #58564b;
+		--accent-color-2: #9f8676;
+		--norm-color: #e1e0de;
+	}
+
 }
 html {
 	scroll-behavior: smooth;
@@ -61,7 +66,6 @@ footer {
 	margin:10px;
 	background-color: var(--norm-color);
 	border-radius: 20px;
-	/* box-shadow: 5px 5px 5px #13152175, -5px -5px 5px #d1d3df40; */
 }
 @media print {
 	.hsectMaj, .hsectMin, .toc  {
@@ -95,7 +99,6 @@ li {
 }
 @media screen {
 	.contactItem {
-		/* box-shadow: inset 5px 5px 5px #13152175, inset -5px -5px 5px #d1d3df40; */
 		background-color: var(--base-color);
 		border-radius: 20px;
 		padding: 15px 15px;
