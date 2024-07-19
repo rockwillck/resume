@@ -137,27 +137,3 @@ a {
 .mainContent {
 	flex:4;
 }
-
-@media print {
-	.printSection {
-		display: flex;
-	}
-	.printSectionLeft,.printSectionRight {
-		flex: 1;
-	}
-
-	.hsectMaj, .hsectMin {
-		margin: 0;
-	}
-
-	li {
-		margin: 0;
-	}
-	li li li li, .unimportant {
-		scale: 0;
-		height: 0;
-	}
-	h1, h2 {
-		margin: 0;
-	}
-}
