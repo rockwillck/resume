@@ -1,17 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 
 :root {
-	--base-color: rgb(15, 17, 22);
-	--accent-color: #888ba5;
-	--accent-color-2: #7278b9;
-	--norm-color: #232430;
+	--base-color: #d1d1d1;
+	--accent-color: rgb(85, 87, 98);
+	--accent-color-2: #466baf;
+	--norm-color: #d1d1d1;
 }
-@media (prefers-color-scheme: light) {
-	:root {
-		--base-color: #dad7d0;
-		--accent-color: #58564b;
-		--accent-color-2: #9f8676;
-		--norm-color: #e1e0de;
+@media (prefers-color-scheme: dark) {
+	html {
+		filter: invert(1);
 	}
 
 }
@@ -24,6 +21,7 @@ body {
 	background-color: var(--base-color);
 	color: var(--accent-color);
 	padding-bottom: 1rem;
+	overflow-x: hidden;
 }
 @media print {
 	body {
@@ -68,14 +66,9 @@ footer {
 	padding: 0 10px;
 }
 .hsectMaj, .hsectMin, .toc {
-	margin:10px;
 	background-color: var(--norm-color);
-	border-radius: 20px;
-}
-@media print {
-	.hsectMaj, .hsectMin, .toc  {
-		box-shadow: none;
-	}
+	padding: 0px 20px;
+	box-sizing: border-box;
 }
 @media (orientation: portrait) {
 	.hsectMaj, .hsectMin {
@@ -92,7 +85,7 @@ footer {
 
 h1, h2 {
 	border-bottom: solid;
-	border-width: 2px;
+	border-width: 1px;
 }
 
 .contact {
@@ -105,8 +98,28 @@ li {
 @media screen {
 	.contactItem {
 		background-color: var(--base-color);
-		border-radius: 20px;
 		padding: 15px 15px;
+	}
+	.contact  > li {
+		border: solid 1px;
+		border-left: none;
+		border-top: none;
+		text-align: right;
+		padding: 0;
+		border-color: var(--accent-color-2);
+		display: flex;
+		border-radius: 10px;
+		overflow: auto;
+	}
+	.contact > li > a {
+		text-decoration: none;
+		padding: 10px;
+		flex: 1;
+		transition: 0.2s;
+	}
+	.contact > li > a:hover {
+		background-color: var(--accent-color-2);
+		color: var(--norm-color);
 	}
 }
 
@@ -139,13 +152,6 @@ a {
 }
 
 @media print {
-	.printSection {
-		display: flex;
-	}
-	.printSectionLeft,.printSectionRight {
-		flex: 1;
-	}
-
 	.hsectMaj, .hsectMin {
 		margin: 0;
 	}
