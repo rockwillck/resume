@@ -6,9 +6,11 @@
 	--accent-color-2: #466baf;
 	--norm-color: #d1d1d1;
 }
-html {
-		filter: invert(1);
-	}
+@media screen {
+	html {
+			filter: invert(1);
+		}
+}
 html {
 	scroll-behavior: smooth;
 	scroll-padding:40px;
