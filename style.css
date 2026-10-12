@@ -1,7 +1,83 @@
-embed {
-	position: absolute;
-	left: 0;
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&display=swap');
+
+html { scroll-behavior: smooth; }
+
+:root {
+	--tsize: 50px;
+}
+@media (max-width: 700px) {
+	:root {
+		--tsize: 30px;
+	}
+}
+
+body {
+  font-family: "Libre Caslon Condensed", serif;
+  font-optical-sizing: auto;
+  margin: 20px;
+  padding: 10px;
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+
+p {
+	font-size: var(--tsize);
+	margin: 0;
+	display: inline;
+	margin-right: 0.5em;
+	opacity: 0.3;
+	transition: opacity 0.5s;
+	scroll-margin-top: 4em;
+}
+
+b {
+	font-style: italic;
+}
+
+a {
+	font-style: italic;
+	color:blue;
+	text-decoration: none;
+	text-transform: lowercase;
+	transition: 0.5s;
+}
+a::before {
+	content: "[";
+	font-style: normal;
+	margin-right: 5px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-weight: normal;
+}
+a::after {
+	content: "]";
+	font-style: normal;
+	margin-left: 8px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-weight: normal;
+}
+
+.highlight {
+	opacity: 1;
+	display: block;
+	padding: 0.5em;
+}
+.default {
+	opacity: 1;
+}
+
+.active {
+	color: black;
+	font-weight: bold;
+}
+
+.top {
+	background-color: white;
+	position: fixed;
+	z-index: 2;
 	top: 0;
+	left: 0;
 	width: 100%;
-	height: 100vh;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
 }
