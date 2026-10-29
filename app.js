@@ -1,20 +1,9 @@
 const allP = Array.from(document.querySelectorAll("p"));
 const navLinks = Array.from(document.querySelectorAll(".top a"));
-const homeLink = document.getElementById("homeLink");
 
 function setActiveSection(targetId, shouldScroll = true) {
-    if (!targetId || targetId === "homeLink") {
-        navLinks.forEach(a => a.classList.remove("active"));
-        if (homeLink) homeLink.classList.add("active");
-
-        allP.forEach(p => {
-            p.classList.remove("highlight");
-            p.classList.add("default");
-        });
-
-        if (shouldScroll) {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        }
+    if (!targetId) {
+        window.location.href = "#intro";
         return;
     }
 
